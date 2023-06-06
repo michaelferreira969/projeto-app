@@ -1,34 +1,32 @@
-import { useState } from "react"
-
 import {
     ResultadosContainer,
     GorjetaContainer,
-    GorjetaTotalContainer,
-    TotalContainer
+    TotalContainer,
+    GorjetaTotalContainer
 } from "./Resultados.styles"
 
-export function Resultados() {
-    return (
+export function Resultados({total, gorjeta, limpar}){
+    return(
         <ResultadosContainer>
             <GorjetaTotalContainer>
                 <GorjetaContainer>
                     <p>
-                        Gorjeta <br />
+                        Gorjeta <br/>
                         <span>/ pessoa</span>
                     </p>
-                    <p>R$ 0.00</p>
-                </GorjetaContainer> 
-                
+                    <p>R$ {gorjeta.toFixed(2)}</p>
+                </GorjetaContainer>
+
                 <TotalContainer>
                     <p>
-                        Total <br />
+                        Total <br/>
                         <span>/ pessoa</span>
                     </p>
-                    <p>R$ 0.00</p>
+                    <p>R$ {total.toFixed(2)}</p>
                 </TotalContainer>
             </GorjetaTotalContainer>
+            <button onClick={limpar}>Limpar</button>
 
-            <button>Limpar</button>
         </ResultadosContainer>
     )
 }
