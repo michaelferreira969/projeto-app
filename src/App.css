@@ -1,0 +1,17 @@
+body {
+    background: rgb(31, 29, 29);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background: white;
+}
+
+.card-two {
+    background-color: aqua;
+}
